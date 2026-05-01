@@ -1,0 +1,12 @@
+{
+  "ownerWallet": "0x63c201bf0b21a8153fe12db2ead90837ff737fcc",
+  "activeWallet": "0x7db71983738d833b4c9f4cb9d8b4935f0b59ef0f",
+  "agents": {
+    "0x7db71983738d833b4c9f4cb9d8b4935f0b59ef0f": {
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEonqGWfnSdYU6KnVlwLfDifLbtTW4Yf8Eal7fBQY99t3x6dDHx5oL8EX1/DTx1V1CGevDJWMHzgfuWEnujNMsgQ==",
+      "id": "019de17d-7983-7157-bde6-b788836e5835",
+      "walletId": "xqir1dmdhsks8d4nj9bkd430",
+      "builderCode": "bc_77jyidnv"
+    }
+  }
+}

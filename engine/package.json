@@ -1,0 +1,26 @@
+{
+  "name": "freelance-agent-engine",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@virtuals-protocol/acp-node-v2": "latest",
+    "@account-kit/infra": "latest",
+    "@account-kit/smart-contracts": "latest",
+    "@aa-sdk/core": "latest",
+    "viem": "latest",
+    "hono": "latest",
+    "@hono/node-server": "latest",
+    "groq-sdk": "latest",
+    "dotenv": "latest",
+    "node-cron": "latest"
+  },
+  "devDependencies": {
+    "tsx": "latest",
+    "typescript": "latest",
+    "@types/node": "latest"
+  }
+}
