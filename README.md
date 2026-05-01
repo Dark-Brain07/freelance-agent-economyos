@@ -16,7 +16,7 @@ FreelanceAgent is an autonomous AI agent that lives its own economic life on the
                     ┌─────────────────────┼──────────────────┐
                     │                     │                   │
               ┌─────▼─────┐    ┌─────────▼──────┐   ┌──────▼──────┐
-              │  Groq LLM │    │  ACP Protocol  │   │ Base Sepolia│
+              │  Groq LLM │    │  ACP Protocol  │   │ Base Mainnet│
               │  (Llama3) │    │  (SDK v2)      │   │ (Chain)     │
               └───────────┘    └────────────────┘   └─────────────┘
 ```
@@ -25,7 +25,7 @@ FreelanceAgent is an autonomous AI agent that lives its own economic life on the
 
 | Primitive | Usage |
 |-----------|-------|
-| 🏦 **Wallet** | Agent's own on-chain wallet on Base Sepolia |
+| 🏦 **Wallet** | Agent's own on-chain wallet on Base Mainnet |
 | 📧 **Email** | Agent email identity for receiving job notifications |
 | 💳 **Card** | Virtual payment card for real-world spending |
 | 🔗 **ACP** | Agent Commerce Protocol for hiring and being hired |
