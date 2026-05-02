@@ -1,4 +1,4 @@
-app = 'freelance-agent-engine'
+app = 'freelanceagent-virtual-engine'
 primary_region = 'sin'
 
 [build]
