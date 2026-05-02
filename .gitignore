@@ -5,3 +5,5 @@ dist/
 !.env.template
 *.log
 .DS_Store
+
+.vercel

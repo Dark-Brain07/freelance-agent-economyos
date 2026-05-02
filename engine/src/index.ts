@@ -98,6 +98,10 @@ app.get("/api/emails", async (c) => {
 // ── Get wallet balance via CLI ──
 app.get("/api/wallet/balance", async (c) => {
   try {
+    const cliPath = process.env.ACP_CLI_PATH;
+    if (!cliPath) {
+      return c.json({ success: true, balance: { eth: "0.0", usdc: "0.0", note: "CLI not configured on cloud" } });
+    }
     const result = execFileSync("acp", ["wallet", "balance", "--chain-id", "8453", "--json"], {
       encoding: "utf-8",
       timeout: 15_000,
@@ -131,11 +135,14 @@ app.post("/api/test-job", async (c) => {
     // Trigger simulation in the agent
     const jobId = await agent.simulateJob(task);
 
-    // Send a real email to demonstrate the Email Primitive
-    import("child_process").then(({ exec }) => {
-      const emailCmd = `npx tsx "F:\\Agent Day One\\acp-cli\\bin\\acp.ts" email compose --to "${process.env.AGENT_EMAIL}" --subject "New Job Alert: ${jobId}" --body "Please execute the following task: ${task}"`;
-      exec(emailCmd, { shell: "cmd.exe" }, () => {});
-    });
+    // Send a real email to demonstrate the Email Primitive (only when CLI is available locally)
+    if (process.env.ACP_CLI_PATH) {
+      import("child_process").then(({ exec }) => {
+        const cliPath = process.env.ACP_CLI_PATH!;
+        const emailCmd = `npx tsx "${cliPath}/bin/acp.ts" email compose --to "${process.env.AGENT_EMAIL}" --subject "New Job Alert: ${jobId}" --body "Please execute the following task: ${task}"`;
+        exec(emailCmd, () => {});
+      });
+    }
 
     return c.json({ success: true, jobId, message: "Demo job sequence started!" });
   } catch (err: unknown) {

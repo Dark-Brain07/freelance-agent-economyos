@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(59, 130, 246);stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:rgb(139, 92, 246);stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with border -->
+  <rect x="16" y="16" width="480" height="480" rx="128" fill="url(#grad)" stroke="rgba(59, 130, 246, 0.2)" stroke-width="16" />
+  
+  <!-- Bot Icon -->
+  <g transform="translate(128, 128) scale(10.666)" fill="none" stroke="rgb(96, 165, 250)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 8V4H8"/>
+    <rect width="16" height="12" x="4" y="8" rx="2"/>
+    <path d="M2 14h2"/>
+    <path d="M20 14h2"/>
+    <path d="M15 13v2"/>
+    <path d="M9 13v2"/>
+  </g>
+</svg>

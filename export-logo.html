@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logo Exporter</title>
+  <style>
+    body { background: #060a12; color: white; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+    #logo-container {
+      width: 512px;
+      height: 512px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+      border: 4px solid rgba(59, 130, 246, 0.2);
+      border-radius: 128px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    svg {
+      width: 256px;
+      height: 256px;
+      color: rgb(96, 165, 250);
+    }
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Your High-Res Logo is Ready!</h2>
+  
+  <div id="logo-container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 8V4H8"/>
+      <rect width="16" height="12" x="4" y="8" rx="2"/>
+      <path d="M2 14h2"/>
+      <path d="M20 14h2"/>
+      <path d="M15 13v2"/>
+      <path d="M9 13v2"/>
+    </svg>
+  </div>
+
+  <button onclick="downloadLogo()">Download PNG</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    function downloadLogo() {
+      const container = document.getElementById("logo-container");
+      html2canvas(container, { backgroundColor: null, scale: 2 }).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "freelance-agent-logo.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      });
+    }
+  </script>
+</body>
+</html>
