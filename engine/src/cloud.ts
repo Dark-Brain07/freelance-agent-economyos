@@ -68,6 +68,8 @@ app.get("/events", (c) => {
 });
 
 // ── API Endpoints ──
+app.get("/", (c) => c.json({ status: "alive", message: "Freelance Agent EconomyOS Engine is Live!" }));
+
 app.get("/api/status", (c) => c.json({
   status: "running",
   agent: process.env.AGENT_WALLET_ADDRESS || "0x7db71983738d833b4c9f4cb9d8b4935f0b59ef0f",
