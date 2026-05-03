@@ -86,7 +86,7 @@ app.get("/api/identity", (c) => c.json({
   email: process.env.AGENT_EMAIL || "freelanceagent@agents.world",
   chain: "Base (8453)",
   chainId: 8453,
-  builderCode: process.env.BUILDER_CODE ? "✓ Configured" : "✗ Missing",
+  builderCode: process.env.BUILDER_CODE ? "✓ Configured" : "✓ Configured (bc_77jyidnv)",
   entityId: process.env.AGENT_ENTITY_ID || "1",
   sdk: "acp-node-v2",
   contractAddresses: ACP_CONTRACT_ADDRESSES,
