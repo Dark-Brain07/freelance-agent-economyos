@@ -488,11 +488,21 @@ export default function App() {
                     Live Activity Stream
                   </span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                  <span className="text-[10px] text-white/25 font-mono">
-                    streaming
-                  </span>
+                <div className="flex items-center gap-4">
+                  <button
+                    onClick={triggerSelfTest}
+                    disabled={testing}
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20 hover:border-emerald-500/30 text-emerald-400 text-xs font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {testing ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Play className="w-3.5 h-3.5" />}
+                    Test Job
+                  </button>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+                    <span className="text-[10px] text-white/25 font-mono">
+                      streaming
+                    </span>
+                  </div>
                 </div>
               </div>
 
