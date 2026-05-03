@@ -23,7 +23,7 @@ import {
   BarChart3,
 } from "lucide-react";
 
-const ENGINE_URL = import.meta.env.VITE_ENGINE_URL || "";
+const ENGINE_URL = import.meta.env.VITE_ENGINE_URL || "https://freelance-agent-economyos.onrender.com";
 
 // ── Types ──
 type ActivityEntry = {
